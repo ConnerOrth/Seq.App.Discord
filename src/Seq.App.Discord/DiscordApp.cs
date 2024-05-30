@@ -56,7 +56,7 @@ public class DiscordApp : SeqApp, ISubscribeToAsync<LogEventData>
     public string? NotifierBotName { get; set; }
 
     [SeqAppSetting(DisplayName = "Discord Avatar URL",
-        HelpText = "Url to any image that fits Discrod avatar requirements",
+        HelpText = "Url to any image that fits Discord avatar requirements",
         IsOptional = true)]
     public string? AvatarUrl { get; set; }
 
@@ -125,7 +125,7 @@ public class DiscordApp : SeqApp, ISubscribeToAsync<LogEventData>
                 new WebhookMessageEmbed()
                 {
                     Title = GetTitle(@event.Data, settings.TitlePropertyName),
-                    Url = string.Format("{0}/#/events?filter=@Id%20%3D%3D%20%22{1}%22&show=expanded\">", settings.SeqBaseUrl, @event.Id ),
+                    Url = string.Format("{0}/#/events?filter=@Id%20%3D%3D%20%22{1}%22&show=expanded", settings.SeqBaseUrl, @event.Id ),
                     Description = @event.Data.RenderedMessage,
                     Color = levelColorMap[@event.Data.Level],
                     Timestamp = @event.Timestamp.ToString("yyyy-MM-ddTHH:mm:ss.fffZ")
