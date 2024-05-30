@@ -2,39 +2,36 @@
 	<PropertyGroup>
 		<TargetFramework>net8.0</TargetFramework>
 		<Nullable>enable</Nullable>
-		<AssemblyVersion>1.0.0.0</AssemblyVersion>
-		<FileVersion>1.0.0.0</FileVersion>
-		<AssemblyName>$(MSBuildProjectName).SixSided</AssemblyName>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<VersionPrefix>1.0.1</VersionPrefix>
 	</PropertyGroup>
 
 	<PropertyGroup>
 		<Description>An app for Seq (http://getseq.net) that forwards messages to Discord.</Description>
 		<PackageId>$(AssemblyName)</PackageId>
-		<Authors>Alexey Galkin,Six-SidedSoftware</Authors>
+		<Authors>Alexey Galkin, Six-SidedSoftware</Authors>
 		<PackageReleaseNotes>see: https://github.com/ConnerOrth/Seq.App.Discord for changes</PackageReleaseNotes>
 		<PackageTags>seq-app;seq;serilog;event;discord</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<Title>Seq.App.Discord.SixSided</Title>
 		<PackageProjectUrl>https://github.com/ConnerOrth/Seq.App.Discord</PackageProjectUrl>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/ConnerOrth/Seq.App.Discord</RepositoryUrl>
 		<Product>Seq.App.Discord.SixSided</Product>
 		<Copyright>Copyright © 2017</Copyright>
+		<PackageIcon>seq-app-discord.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
-	
-	<ItemGroup>
-		<None Include="..\README.md">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
-		</None>
-	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Seq.Apps" Version="2023.4.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Include="asset/seq-app-discord.png" Pack="true" Visible="false" PackagePath="" />
-		<None Include="../LICENSE" Pack="true" PackagePath="" />
+		<None Include="../../asset/seq-app-discord.png" Pack="true" Visible="false" PackagePath="" />
+		<None Include="../../LICENSE" Pack="true" PackagePath="" />
+		<None Include="..\..\README.md">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
 		<None Include="./obj/publish/**/*" Exclude="./obj/publish/$(MSBuildProjectName).dll;./obj/publish/Seq.Apps.dll;./obj/publish/Serilog.dll" Pack="true" PackagePath="lib/$(TargetFramework)" />
 	</ItemGroup>
 </Project>

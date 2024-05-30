@@ -2,12 +2,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seq.App.Discord", "Seq.App.Discord\Seq.App.Discord.csproj", "{90B02D98-6AD8-4385-846A-00896658FC16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seq.App.Discord.SixSided", "src\Seq.App.Discord\Seq.App.Discord.SixSided.csproj", "{90B02D98-6AD8-4385-846A-00896658FC16}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{9777B9DC-4110-4048-A2FF-E822965E666C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sln", "sln", "{9777B9DC-4110-4048-A2FF-E822965E666C}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		Build.ps1 = Build.ps1
 		LICENSE = LICENSE
 		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EC1C3695-7124-4787-9A06-3F76BF1FAFAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "asset", "asset", "{E7D8D0A1-AFD7-4013-82B3-F5D68A07900A}"
+	ProjectSection(SolutionItems) = preProject
+		asset\seq-app-discord.png = asset\seq-app-discord.png
 	EndProjectSection
 EndProject
 Global
@@ -23,6 +32,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{90B02D98-6AD8-4385-846A-00896658FC16} = {EC1C3695-7124-4787-9A06-3F76BF1FAFAC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1369910F-2EB3-4CB1-8D48-E952BD9FBAEB}

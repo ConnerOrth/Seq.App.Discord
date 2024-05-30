@@ -1,15 +1,12 @@
 ﻿using Seq.App.Discord.Data;
 using Seq.Apps;
 using Seq.Apps.LogEvents;
-using Serilog.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
-using LogEventLevel = Seq.Apps.LogEvents.LogEventLevel;
 
 namespace Seq.App.Discord;
 
@@ -31,7 +28,9 @@ public class DiscordApp : SeqApp, ISubscribeToAsync<LogEventData>
     private static Settings settings = new Settings();
 
     public DiscordApp() : this(new HttpClient()) { }
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     internal DiscordApp(HttpClient client)
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     {
         this.client = client;
         this.client.Timeout = TimeSpan.FromSeconds(10);

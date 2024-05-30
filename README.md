@@ -4,6 +4,11 @@ An app for Seq (http://getseq.net) that forwards messages to Discord through web
 
 ## Changes
 
+### 1.0.1
+
+- Added build script
+- Added missing icon
+
 ### 1.0.0
 
 - Updated project to .NET 8
