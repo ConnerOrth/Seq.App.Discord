@@ -1,8 +1,14 @@
-# Seq.App.Discord
+# Seq.App.Discord.SixSided
 
 An app for Seq (http://getseq.net) that forwards messages to Discord through webhooks.
 
 ## Changes
+
+### 1.0.0
+
+- Updated project to .NET 8
+- Added option to specify roles to mention in the webhookmessage.
+- Removed obsolete code
 
 ### 0.4.0
 
@@ -44,3 +50,4 @@ From solution root, run:
 ## Credits
 
 Inspired by [stayhard](https://github.com/stayhard/Seq.App.HipChat)
+Forked from [glkn's Seq.App.Discord](https://github.com/glkn/Seq.App.Discord)
