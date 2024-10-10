@@ -76,6 +76,7 @@ public class DiscordApp : SeqApp, ISubscribeToAsync<LogEventData>
             SeqBaseUrl = SeqBaseUrl ?? throw new InvalidOperationException("The `SeqBaseUrl` setting is required."),
             DiscordWebhookUrl = DiscordWebhookUrl ?? throw new InvalidOperationException("The `DiscordWebhookUrl` setting is required."),
             AvatarUrl = AvatarUrl,
+            TitlePropertyName = TitlePropertyName,
             Username = !string.IsNullOrWhiteSpace(NotifierBotName) ? NotifierBotName : "Seq notifier",
             Content = !string.IsNullOrWhiteSpace(RolesToMention)
                 ? RolesToMention.Split(',', StringSplitOptions.RemoveEmptyEntries)
