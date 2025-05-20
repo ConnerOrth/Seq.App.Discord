@@ -4,6 +4,10 @@ An app for Seq (http://getseq.net) that forwards messages to Discord through web
 
 ## Changes
 
+### 1.0.3
+
+- Fixed missing property setter for TitlePropertyName (thanks for the PR @joshcomery)
+
 ### 1.0.2
 
 - Fixed a small typo
